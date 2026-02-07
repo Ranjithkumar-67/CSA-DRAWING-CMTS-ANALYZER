@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: cmt-analyzer
+    runtime: python
+    buildCommand: pip install -r requirements_minimal.txt
+    startCommand: python app_yolo8.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: PORT
+        generateValue: true
